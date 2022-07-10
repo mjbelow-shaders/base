@@ -58,7 +58,7 @@ fps_time = 0
 fps = 0
 frames = 0
 
-vsync = 0
+vsync = 1
 gh_renderer.vsync(vsync)
 
 
