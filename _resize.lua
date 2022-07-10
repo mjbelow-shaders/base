@@ -1,4 +1,4 @@
-
+frame = 0
 --kx_resize()
 
 winW, winH = gh_window.getsize(0)
