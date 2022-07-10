@@ -33,6 +33,8 @@ shadertoy_prog_buf_a = gh_node.getid("shadertoy_prog_buf_a")
 shadertoy_prog_buf_b = gh_node.getid("shadertoy_prog_buf_b")
 shadertoy_prog_buf_c = gh_node.getid("shadertoy_prog_buf_c")
 shadertoy_prog_buf_d = gh_node.getid("shadertoy_prog_buf_d")
+shadertoy_prog_buf_e = gh_node.getid("shadertoy_prog_buf_e")
+shadertoy_prog_buf_f = gh_node.getid("shadertoy_prog_buf_f")
 shadertoy_prog_img = gh_node.getid("shadertoy_prog_img")
 
 
@@ -109,6 +111,12 @@ end
 if (rt3_clamp_addressing == nil) then
   rt3_clamp_addressing = 1
 end  
+if (rt4_clamp_addressing == nil) then
+  rt4_clamp_addressing = 1
+end  
+if (rt5_clamp_addressing == nil) then
+  rt5_clamp_addressing = 1
+end  
 if (img_clamp_addressing == nil) then
   img_clamp_addressing = 1
 end  
@@ -124,6 +132,8 @@ buf_A = 0
 buf_B = 0
 buf_C = 0
 buf_D = 0
+buf_E = 0
+buf_F = 0
 
 if (shadertoy_prog_buf_a > 0) then
   buf_A = gh_render_target.create_ex_v5(winW, winH, num_color_targets, pf, linear_filtering, rt0_clamp_addressing, samples, create_depth_texture, gen_mipmaps)
@@ -141,6 +151,13 @@ if (shadertoy_prog_buf_d > 0) then
   buf_D = gh_render_target.create_ex_v5(winW, winH, num_color_targets, pf, linear_filtering, rt3_clamp_addressing, samples, create_depth_texture, gen_mipmaps)
 end
   
+if (shadertoy_prog_buf_e > 0) then
+  buf_E = gh_render_target.create_ex_v5(winW, winH, num_color_targets, pf, linear_filtering, rt4_clamp_addressing, samples, create_depth_texture, gen_mipmaps)
+end
+  
+if (shadertoy_prog_buf_f > 0) then
+  buf_F = gh_render_target.create_ex_v5(winW, winH, num_color_targets, pf, linear_filtering, rt5_clamp_addressing, samples, create_depth_texture, gen_mipmaps)
+end
   
 img = gh_render_target.create_ex_v5(winW, winH, num_color_targets, PF_U8_RGBA, linear_filtering, img_clamp_addressing, samples, create_depth_texture, 0)
 

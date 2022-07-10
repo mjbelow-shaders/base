@@ -46,6 +46,22 @@ if (buf_D > 0) then
   gh_render_target.unbind(buf_D)
 end
 
+if (buf_E > 0) then
+  gh_render_target.resize(buf_E, winW, winH)
+  gh_render_target.bind(buf_E)
+  gh_renderer.clear_color_depth_buffers(0.0, 0.0, 0.0, 1.0, 1.0)
+  draw_quad(0, 0, winW, winH)
+  gh_render_target.unbind(buf_E)
+end  
+
+if (buf_F > 0) then
+  gh_render_target.resize(buf_F, winW, winH)
+  gh_render_target.bind(buf_F)
+  gh_renderer.clear_color_depth_buffers(0.0, 0.0, 0.0, 1.0, 1.0)
+  draw_quad(0, 0, winW, winH)
+  gh_render_target.unbind(buf_F)
+end  
+
 if (img > 0) then
   gh_render_target.resize(img, winW, winH)
   gh_render_target.bind(img)
